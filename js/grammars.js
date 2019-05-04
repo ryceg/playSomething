@@ -74,7 +74,7 @@ var grammars = {
             "anything#directionHandler#",
             "something interesting#directionHandler#",
             "something that contrasts nicely#directionHandler#",
-            "something in groups of #number.s#. #direction.capitalize#  #modifier#",
+            "something in groups of #number.s#. #direction.capitalize# #modifier#",
             "#letterNotes.a# at any pitch. #direction.capitalize# #modifier#",
             "#letterNotes.a# and #letterNotes.a# #shortSpeedOrNo# in your #register# register.",
             "#letterNotes.a# and #letterNotes.a# #shortSpeedOrNo# in your #register# register#directionHandler#"
@@ -157,8 +157,8 @@ var grammars = {
             ". #forHowLongThen#"
         ],
         forHowLongThen: [
-            "#then.capitalize# play #afterOrigin#",
-            "#then.capitalize# pause for a moment. Then, play #afterOrigin#"
+            "#then.capitalize# #afterOrigin#",
+            "#then.capitalize# pause for a moment. Then, #afterOrigin#"
         ],
         then: [
             "then, ",

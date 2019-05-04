@@ -58,7 +58,11 @@ var grammars = {
         directionHandler: [
             ". #direction.capitalize# #modifier#",
             ". #direction.capitalize# #modifier#",
-            ", and #direction# #modifier#"
+            ", and #direction# #modifier#",
+            " #modifier#",
+            " #modifier#",
+            " #modifier#",
+            " #modifier#"
         ],
         noise: [
             "loud noise",

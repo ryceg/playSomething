@@ -101,7 +101,14 @@ var grammars = {
             "nothing#forHowLongChance#",
             "nothing#forHowLongChance#",
             "nothing#forHowLongChance#",
-            "nothing",
+            "nothing, and listen to what other people are playing.",
+            "nothing, and notice what sort of motifs other people are playing. When you play again, try and incorporate them into your improv.",
+            "nothing. Let someone else have a solo.",
+            "nothing. Let someone else have a solo.",
+            "nothing. Let someone else have a solo.",
+            "a supporting role for someone else to have a solo.",
+            "nothing. Appreciate what the other musicians are playing.",
+            "only when it would enhance what other people are playing.",
             "nothing. Be absolutely still, for as long as you feel is necessary.",
             "nothing. Don't move an inch.",
             "nothing. Don't even think of moving a muscle.",
@@ -175,7 +182,16 @@ var grammars = {
             "play #notesOrSilence#",
             "play #notesOrSilence#",
             "play #notesOrSilence#",
-            "play the licc #liccModifier#"
+            "play the licc #liccModifier#",
+            "if you are playing in a group, take the opportunity to do some call and response with another musician.",
+            "#afterOriginSpecial#"
+        ],
+        afterOriginSpecial: [
+            "if you are playing in a group, take the opportunity to do some call and response with another musician.",
+            "play #letterNotes.a# and then scream at the top of your lungs.",
+            "take this moment to text a friend and tell them that you value them.",
+            "take a drink of water. If you don't have water, take a drink of beer. If you don't have beer, take a moment to re-evaluate your life choices.",
+            "take a bow."
         ],
         origin: [
             "Build a motif out of #notesOrSilence#",

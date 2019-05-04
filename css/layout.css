@@ -1,0 +1,50 @@
+
+#container {
+	width: auto;
+	text-align: center;
+	margin: auto;
+	position: relative;
+}
+
+#content {
+	/* margin: 2em; */
+	size: 5em;
+	text-align: center;
+	/* float: center; */
+	position: absolute;
+	left: 0;
+	top: 50%;
+	width: 100%;
+}
+
+
+.outputSample {
+		margin: 5px;
+		size: 5em;
+		text-align: center;
+	padding: 5px;
+	/* background-color: rgb(250, 250, 255); */
+}
+
+/* #content { */
+	/* margin: 5px; */
+	/* float: middle; */
+	/* size: 5em; */
+	/* text-align: center; */
+	/* width: auto; */
+/* } */
+
+#output {
+	margin: 5px;
+	size: 5em;
+	text-align: center;
+	padding: 5px;
+	/* background-color: rgb(230, 200, 255); */
+}
+
+#grammar {
+		padding: 5px;
+	margin: 5px;
+	text-align: center;
+	/* background-color: rgb(200, 230, 255); */
+}

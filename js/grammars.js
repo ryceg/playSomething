@@ -27,6 +27,11 @@ var grammars = {
             "softly",
             "softly",
             "moderately quietly",
+            "loudly initially, and then getting progressively softer and softer",
+            "softly to start, and then get progressively louder",
+            "in a constant shifting pattern of crescendos and decrescendos",
+            "while decrescendoing",
+            "while crescendoing",
             "mezzo-piano",
             "mezzo-forte",
             "moderately loud",
@@ -106,9 +111,31 @@ var grammars = {
         ],
         notesOrSilence: [
             "#note#",
-            "#note#",
+            "#collab#",
             "#note##forHowLongChance#",
             "#silence#"
+        ],
+        collab: [
+            "progressively quieter, letting someone else take over. Then, join back in with #note#",
+            "nothing while you listen to what themes are developing around you. Once you've heard a motif, start to do call and response with the musician",
+            "with a friend, starting a duo. Perform it as musically as possible, developing the themes that you've been working on in this piece",
+            "a steady pulse for somebody else to play off of",
+            "a cool beat for the others to jam to",
+            "whatever the person to your left is playing",
+            "something with the person to your right",
+            "with feeling",
+            "with #adjective#",
+            "with one of the other musicians. Ignore this now, and just follow them, contributing to the music as best you can",
+            "like you're in a well rehearsed band, and take a step back from the music if somebody else is having a solo",
+            "with the other musicians. Don't worry about this, and listen to the music, and play intuitively, rather than doing whatever this app tells you to",
+            "like you're not being told what to do by a couple lines of code"
+        ],
+        adjective: [
+            "unbridled enthusiasm",
+            "joy",
+            "deep sadness",
+            "melancholy",
+            "rising tension"
         ],
         number: [
             "two",
@@ -212,8 +239,8 @@ var grammars = {
             "play #notesOrSilence#",
             "play #notesOrSilence#",
             "play the licc #liccModifier#",
-            "if you are playing in a group, take the opportunity to do some call and response with another musician",
-            "#afterOriginSpecial."
+            "take the opportunity to do some call and response with another musician",
+            "#afterOriginSpecial#."
         ],
         afterOrigin: [
             "continue your motif. Then, play #notesOrSilence#.",
@@ -230,7 +257,8 @@ var grammars = {
             "play #notesOrSilence#.",
             "play #notesOrSilence#.",
             "play #notesOrSilence#.",
-            "play #notesOrSilence#.",
+            "play #notesOrSilence#. If now's a good time to finish up, then start to do so.",
+            "play #notesOrSilence#. If now's a good time to wind up, then wind it up.",
             "play the licc #liccModifier#.",
             "if you are playing in a group, take the opportunity to do some call and response with another musician.",
             "#afterOriginSpecial#."
@@ -243,10 +271,10 @@ var grammars = {
             "take a bow",
             "Play your motif in a completely unrecognizable way through extended techniques. Then, gradually use fewer and fewer extended techniques until you play your motif in it’s original form"
         ],
-        origin: [
+        originStart: [
             "Build a motif out of #notesOrSilence#.",
             "Play #notesOrSilence# (making a motif out of it).",
-            "Play your favourite theme. Then, play #notesOrSilence#.",
+            "Play the head to your favourite jazz standard. Then, play #notesOrSilence#.",
             "Try playing the hardest scale you know. Then, play #notesOrSilence#.",
             "Fake out the audience, by pretending to play. Then, play #notesOrSilence#.",
             "Play a motif (make sure to build on it as you improvise). Then, once you have played your motif, play #notesOrSilence#.",
@@ -262,6 +290,81 @@ var grammars = {
             "Play #notesOrSilence#.",
             "Play #notesOrSilence#.",
             "Play the licc #liccModifier#."
+        ],
+        origin: [
+            "Play Something is #pieceOrCode.a# #written# by Rhys Gray. It is a #simpleWebapp# that #makes# #instructions# for #originPeople# to improvise over. #playWhatItTellsYouToDo# #moveOn# #clickToContinue#."
+        ],
+        playWhatItTellsYouToDo: [
+            "Play what it tells you to do."
+        ],
+        moveOn: [
+            "If it doesn't tell you when to move on, you are free to move on at any time.",
+            "If there are no instructions for when to move on, you are free to move on at any time.",
+            "If it doesn't tell you when to move on, you are free to move on at any time.",
+            "If there are no instructions for when to move on, you are free to move on at any time.",
+            "If it doesn't tell you when to move on, you are free to move on at any time.",
+            "If there are no instructions for when to move on, you are free to move on at any time.",
+            "If it doesn't say when to go, go whenever. It's an app, not your mum."
+        ],
+        clickToContinue: [
+            "Click to continue",
+            "Press on the screen (assuming you're using a phone) to continue",
+            "Click to start the music",
+            "Click to start the chaos",
+            "Click to begin"
+        ],
+        simpleWebapp: [
+            "simple webapp",
+            "simple webapp",
+            "simple webapp",
+            "simple webapp",
+            "simple webapp",
+            "simple webapp",
+            "simple webapp",
+            "needlessly complex webapp",
+            "needlessly complex webapp",
+            "needlessly complex webapp",
+            "poor excuse of a composition"
+        ],
+        makes: [
+            "makes",
+            "produces",
+            "creates"
+        ],
+        pieceOrCode: [
+            "piece",
+            "piece of code",
+            "musical work",
+            "abomination",
+            "terrible piece of code"
+        ],
+        written: [
+            "written",
+            "composed",
+            "coded",
+            "created",
+            "birthed"
+        ],
+        instructions: [
+            "random instructions",
+            "random performance directions",
+            "totally random instructions",
+            "complete gibberish"
+        ],
+        originPeople: [
+            "any number of #people#",
+            "as many #people# as you like",
+            "as many #people# as you are comfortable with",
+            "at least four #people#, but no more than 236",
+        ],
+        people: [
+            "people",
+            "musicians",
+            "players",
+            "people",
+            "musicians",
+            "players",
+            "poor sods"
         ],
         liccModifier: [
             "#speed# #forHowLong#",

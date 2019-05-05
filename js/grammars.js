@@ -13,6 +13,10 @@ var grammars = {
             "play it (if possible)",
             "play it",
             "play it",
+            "play it",
+            "play it",
+            "play it",
+            "play it",
             "to the best of your ability, play it"
         ],
         dynamic: [
@@ -39,12 +43,13 @@ var grammars = {
             "classical"
         ],
         meter: [
-            "common time",
-            "4/4",
+            "in common time",
+            "in 4/4",
             "like a waltz",
-            "3/4",
+            "in 3/4",
             "like a boogie",
-            "like dubstep"
+            "like dubstep",
+            "like you're Jacob Collier"
         ],
         modifier: [
             "#dynamic#",
@@ -74,19 +79,30 @@ var grammars = {
             "as close to an explosion as you can",
             "ominously"
         ],
-        until: [
-            "#forHowLong#",
-            ""
-        ],
         note: [
             "something#directionHandler#",
             "anything#directionHandler#",
+            "#letterNotes.a#",
             "something interesting#directionHandler#",
             "something that contrasts nicely#directionHandler#",
             "something in groups of #number.s#. #direction.capitalize# #modifier#",
-            "#letterNotes.a# at any pitch. #direction.capitalize# #modifier#",
-            "#letterNotes.a# and #letterNotes.a# #shortSpeedOrNo# in your #register# register.",
-            "#letterNotes.a# and #letterNotes.a# #shortSpeedOrNo# in your #register# register#directionHandler#"
+            "#letterNotes.a# at any pitch. #direction.capitalize# #letterNotesModifier#",
+            "#letterNotes.a# and #letterNotes.a# #shortSpeedOrNo# in your #register# register",
+            "#letterNotes.a# and #letterNotes.a# #shortSpeedOrNo# in your #register# register#letterNotesDirectionHandler#"
+        ],
+        letterNotesModifier: [
+            "#speed# #forHowLong#",
+            "#number# times",
+            "#forHowLong#"
+        ],
+        letterNotesDirectionHandler: [
+            ". #direction.capitalize# #letterNotesModifier#",
+            ". #direction.capitalize# #letterNotesModifier#",
+            ", and #direction# #letterNotesModifier#",
+            " #letterNotesModifier#",
+            " #letterNotesModifier#",
+            " #letterNotesModifier#",
+            " #letterNotesModifier#"
         ],
         notesOrSilence: [
             "#note#",
@@ -110,18 +126,18 @@ var grammars = {
             "nothing#forHowLongChance#",
             "nothing#forHowLongChance#",
             "nothing#forHowLongChance#",
-            "nothing, and listen to what other people are playing.",
-            "nothing, and notice what sort of motifs other people are playing. When you play again, try and incorporate them into your improv.",
-            "nothing. Let someone else have a solo.",
-            "nothing. Let someone else have a solo.",
-            "nothing. Let someone else have a solo.",
-            "a supporting role for someone else to have a solo.",
-            "nothing. Appreciate what the other musicians are playing.",
-            "only when it would enhance what other people are playing.",
-            "nothing. Be absolutely still, for as long as you feel is necessary.",
-            "nothing. Don't move an inch.",
-            "nothing. Don't even think of moving a muscle.",
-            "nothing, but dance around as if you're playing the most complex solo in the world."
+            "nothing, and listen to what other people are playing",
+            "nothing, and notice what sort of motifs other people are playing. When you play again, try and incorporate them into your improv",
+            "nothing. Let someone else have a solo",
+            "nothing. Let someone else have a solo",
+            "nothing. Let someone else have a solo",
+            "a supporting role for someone else to have a solo",
+            "nothing. Appreciate what the other musicians are playing",
+            "only when it would enhance what other people are playing",
+            "nothing. Be absolutely still, for as long as you feel is necessary",
+            "nothing. Don't move an inch",
+            "nothing. Don't even think of moving a muscle",
+            "nothing, but dance around as if you're playing the most complex solo in the world"
         ],
         shortSpeedOrNo: [
             "",
@@ -130,6 +146,7 @@ var grammars = {
         shortSpeed: [
             "rapidly",
             "slowly",
+            "as fast as possible",
             "moderately quickly",
             "as fast as a trill"
         ],
@@ -137,13 +154,14 @@ var grammars = {
             "rather slowly",
             "at a decent pace",
             "hectically, changing between two different tempos at random intervals",
-            "in a light trot",
             "as slowly as possible",
             "as briefly as possible, with lots of space between them",
             "at the tempo of #tempo.a#",
             "at the tempo of #tempo.a#",
-            "in #meter#",
-            "at the tempo of #tempo.a# in #meter#"
+            "#meter#",
+            "#meter#",
+            "#meter#",
+            "at the tempo of #tempo.a# #meter#"
         ],
         tempo: [
             "larghetto",
@@ -164,12 +182,12 @@ var grammars = {
             "until everyone else gets bored#forHowLongChance#"
         ],
         forHowLongChance: [
-            ".",
+            "",
             ". #forHowLongThen#"
         ],
         forHowLongThen: [
-            "#then.capitalize# #afterOrigin#",
-            "#then.capitalize# pause for a moment. Then, #afterOrigin#"
+            "#then.capitalize# #afterOriginNoFullStop#",
+            "#then.capitalize# pause for a moment. Then, #afterOriginNoFullStop#"
         ],
         then: [
             "then, ",
@@ -177,7 +195,7 @@ var grammars = {
             "immediately following that, ",
             "afterwards, "
         ],
-        afterOrigin: [
+        afterOriginNoFullStop: [
             "continue your motif. Then, play #notesOrSilence#",
             "build on your motif; theme and variations style. Then, play #notesOrSilence#",
             "repeat your motif #forHowLong#",
@@ -194,44 +212,63 @@ var grammars = {
             "play #notesOrSilence#",
             "play #notesOrSilence#",
             "play the licc #liccModifier#",
+            "if you are playing in a group, take the opportunity to do some call and response with another musician",
+            "#afterOriginSpecial."
+        ],
+        afterOrigin: [
+            "continue your motif. Then, play #notesOrSilence#.",
+            "build on your motif; theme and variations style. Then, play #notesOrSilence#.",
+            "repeat your motif #forHowLong#.",
+            "play your motif#forHowLongChance#.",
+            "develop your motif #forHowLong#.",
+            "play #notesOrSilence#.",
+            "play #notesOrSilence#.",
+            "play #notesOrSilence#.",
+            "play #notesOrSilence#.",
+            "play #notesOrSilence#.",
+            "play #notesOrSilence#.",
+            "play #notesOrSilence#.",
+            "play #notesOrSilence#.",
+            "play #notesOrSilence#.",
+            "play #notesOrSilence#.",
+            "play the licc #liccModifier#.",
             "if you are playing in a group, take the opportunity to do some call and response with another musician.",
-            "#afterOriginSpecial#"
+            "#afterOriginSpecial#."
         ],
         afterOriginSpecial: [
-            "if you are playing in a group, take the opportunity to do some call and response with another musician.",
-            "play #letterNotes.a# and then scream at the top of your lungs.",
-            "take this moment to text a friend and tell them that you value them.",
-            "take a drink of water. If you don't have water, take a drink of beer. If you don't have beer, take a moment to re-evaluate your life choices.",
-            "take a bow.",
+            "if you are playing in a group, take the opportunity to do some call and response with another musician",
+            "play #letterNotes.a# and then scream at the top of your lungs",
+            "take this moment to text a friend and tell them that you value them",
+            "take a drink of water. If you don't have water, take a drink of beer. If you don't have beer, take a moment to re-evaluate your life choices",
+            "take a bow",
             "Play your motif in a completely unrecognizable way through extended techniques. Then, gradually use fewer and fewer extended techniques until you play your motif in it’s original form"
         ],
         origin: [
-            "Build a motif out of #notesOrSilence#",
-            "Play #notesOrSilence# (making a motif out of it)",
-            "Play your favourite theme. Then, play #notesOrSilence#",
-            "Try playing the hardest scale you know. Then, play #notesOrSilence#",
-            "Fake out the audience, by pretending to play. Then, play #notesOrSilence#",
-            "Play #notesOrSilence#",
-            "Play a motif (make sure to build on it as you improvise). Then, once you have played your motif, play #notesOrSilence#",
-            "Play a fragment of your favourite jazz standard. Then, play #notesOrSilence#",
-            "Play #notesOrSilence#",
-            "Play #notesOrSilence#",
-            "Play #notesOrSilence#",
-            "Play #notesOrSilence#",
-            "Play #notesOrSilence#",
-            "Play #notesOrSilence#",
-            "Play #notesOrSilence#",
-            "Play #notesOrSilence#",
-            "Play #notesOrSilence#",
-            "Play #notesOrSilence#",
-            "Play the licc #liccModifier#"
+            "Build a motif out of #notesOrSilence#.",
+            "Play #notesOrSilence# (making a motif out of it).",
+            "Play your favourite theme. Then, play #notesOrSilence#.",
+            "Try playing the hardest scale you know. Then, play #notesOrSilence#.",
+            "Fake out the audience, by pretending to play. Then, play #notesOrSilence#.",
+            "Play a motif (make sure to build on it as you improvise). Then, once you have played your motif, play #notesOrSilence#.",
+            "Play a fragment of your favourite jazz standard. Then, play #notesOrSilence#.",
+            "Play #notesOrSilence#.",
+            "Play #notesOrSilence#.",
+            "Play #notesOrSilence#.",
+            "Play #notesOrSilence#.",
+            "Play #notesOrSilence#.",
+            "Play #notesOrSilence#.",
+            "Play #notesOrSilence#.",
+            "Play #notesOrSilence#.",
+            "Play #notesOrSilence#.",
+            "Play #notesOrSilence#.",
+            "Play the licc #liccModifier#."
         ],
         liccModifier: [
-            "#speed# #forHowLong#.",
-            "#number# times.",
-            "in the key of #letterNotes# #forHowLong#.",
+            "#speed# #forHowLong#",
+            "#number# times",
+            "in the key of #letterNotes# #forHowLong#",
             // "",
-            "#forHowLong#."
+            "#forHowLong#"
         ],
         letterNotes: [
             "A",

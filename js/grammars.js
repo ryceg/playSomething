@@ -38,22 +38,27 @@ var grammars = {
             "rock",
             "classical"
         ],
-        metre: [
+        meter: [
             "common time",
-            "common time",
-            "common time",
-            "common time",
-            "4/4",
-            "4/4",
             "4/4",
             "like a waltz",
-            "3/4"
+            "3/4",
+            "like a boogie",
+            "like dubstep"
         ],
         modifier: [
             "#dynamic#",
             "#speed#",
             "#liccModifier#",
-            "#liccModifier#"
+            "#liccModifier#",
+            "#technique#"
+        ],
+        technique: [
+            "in a way that your instrument is not normally played",
+            "staccato",
+            "legato",
+            "with microtonal variations",
+            "with slight detunings (if possible)"
         ],
         directionHandler: [
             ". #direction.capitalize# #modifier#",
@@ -134,9 +139,11 @@ var grammars = {
             "hectically, changing between two different tempos at random intervals",
             "in a light trot",
             "as slowly as possible",
+            "as briefly as possible, with lots of space between them",
             "at the tempo of #tempo.a#",
             "at the tempo of #tempo.a#",
-            "at the tempo of #tempo.a#"
+            "in #meter#",
+            "at the tempo of #tempo.a# in #meter#"
         ],
         tempo: [
             "larghetto",
@@ -195,7 +202,8 @@ var grammars = {
             "play #letterNotes.a# and then scream at the top of your lungs.",
             "take this moment to text a friend and tell them that you value them.",
             "take a drink of water. If you don't have water, take a drink of beer. If you don't have beer, take a moment to re-evaluate your life choices.",
-            "take a bow."
+            "take a bow.",
+            "Play your motif in a completely unrecognizable way through extended techniques. Then, gradually use fewer and fewer extended techniques until you play your motif in it’s original form"
         ],
         origin: [
             "Build a motif out of #notesOrSilence#",

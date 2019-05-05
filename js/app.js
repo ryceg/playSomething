@@ -2,6 +2,9 @@ console.log("app");
 
 
 $(document).ready(function() {
+    var fileContentLines = null;
+    var numResults = 5;
+    var idString = "result";
     
     function loadGrammar(name) {
         $("#output").html("");
@@ -39,12 +42,4 @@ $(document).ready(function() {
             $("#output").append(div);
     }
 
-    // setTimeout(function() {
-    //     loadGrammar("playSomething");
-
-    // }, 1);
-
-    // $('#grammarSelect').on('change', function() {
-    //     loadGrammar(this.value);
-    // });
 });

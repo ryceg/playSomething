@@ -1,6 +1,29 @@
+:root {
+	font-size: 24px;
+  }
+  @media (min-width: 768px) {
+	:root {
+	  font-size: 30px;
+	}
+  }
+  @media (min-width: 992px) {
+	:root {
+	  font-size: 40px;
+	}
+  }
+  @media (min-width: 1200px) {
+	:root {
+	  font-size: 45px;
+	}
+  }
+
+  .class {
+	font-size: calc(1em + 1vw);
+  }
 
 #container {
 	width: auto;
+	max-width: 70ch;
 	text-align: center;
 	margin: auto;
 	position: relative;
@@ -20,9 +43,9 @@
 
 .outputSample {
 		margin: 5px;
-		size: 5em;
+		/* size: 5em; */
 		text-align: center;
-	padding: 5px;
+	padding: 2ch;
 	/* background-color: rgb(250, 250, 255); */
 }
 
@@ -38,12 +61,12 @@
 	margin: 5px;
 	size: 5em;
 	text-align: center;
-	padding: 5px;
+	padding: 2ch;
 	/* background-color: rgb(230, 200, 255); */
 }
 
 #grammar {
-		padding: 5px;
+	padding: 2ch;
 	margin: 5px;
 	text-align: center;
 	/* background-color: rgb(200, 230, 255); */

@@ -115,6 +115,11 @@ var grammars = {
             "#note##forHowLongChance#",
             "#silence#"
         ],
+        notesNoSilence: [
+                "#note#",
+                "#collab#",
+                "#note##forHowLongChance#"
+        ]
         collab: [
             "progressively quieter, letting someone else take over. Then, join back in with #note#",
             "nothing while you listen to what themes are developing around you. Once you've heard a motif, start to do call and response with the musician",
@@ -272,20 +277,17 @@ var grammars = {
             "Play your motif in a completely unrecognizable way through extended techniques. Then, gradually use fewer and fewer extended techniques until you play your motif in it’s original form"
         ],
         originStart: [
-            "Build a motif out of #notesOrSilence#.",
-            "Play #notesOrSilence# (making a motif out of it).",
+            "Build a motif out of #notesNoSilence#.",
+            "Play #notesNoSilence# (making a motif out of it).",
             "Play the head to your favourite jazz standard. Then, play #notesOrSilence#.",
-            "Try playing the hardest scale you know. Then, play #notesOrSilence#.",
+            "Try playing the hardest scale you know. Then, build a motif out of #notesNoSilence#.",
             "Fake out the audience, by pretending to play. Then, play #notesOrSilence#.",
             "Play a motif (make sure to build on it as you improvise). Then, once you have played your motif, play #notesOrSilence#.",
             "Play a fragment of your favourite jazz standard. Then, play #notesOrSilence#.",
-            "Play #notesOrSilence#.",
-            "Play #notesOrSilence#.",
-            "Play #notesOrSilence#.",
-            "Play #notesOrSilence#.",
-            "Play #notesOrSilence#.",
-            "Play #notesOrSilence#.",
-            "Play #notesOrSilence#.",
+            "Play #notesNoSilence#.",
+            "Play #notesNoSilence#.",
+            "Play #notesNoSilence#.",
+            "Play #notesNoSilence#.",
             "Play #notesOrSilence#.",
             "Play #notesOrSilence#.",
             "Play #notesOrSilence#.",

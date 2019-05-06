@@ -67,6 +67,9 @@ var grammars = {
             "in a way that your instrument is not normally played",
             "staccato",
             "legato",
+            "staccato",
+            "legato",
+            "with your choice of extended technique",
             "with microtonal variations",
             "with slight detunings (if possible)"
         ],
@@ -253,6 +256,7 @@ var grammars = {
             "repeat your motif #forHowLong#.",
             "play your motif#forHowLongChance#.",
             "develop your motif #forHowLong#.",
+            "play something fun.",
             "play #notesOrSilence#.",
             "play #notesOrSilence#.",
             "play #notesOrSilence#.",
@@ -265,11 +269,11 @@ var grammars = {
             "play #notesOrSilence#. If now's a good time to finish up, then start to do so.",
             "play #notesOrSilence#. If now's a good time to wind up, then wind it up.",
             "play the licc #liccModifier#.",
-            "if you are playing in a group, take the opportunity to do some call and response with another musician.",
+            "take the opportunity to do some call and response with another musician.",
             "#afterOriginSpecial#."
         ],
         afterOriginSpecial: [
-            "if you are playing in a group, take the opportunity to do some call and response with another musician",
+            "take the opportunity to do some call and response with another musician",
             "play #letterNotes.a# and then scream at the top of your lungs",
             "take this moment to text a friend and tell them that you value them",
             "take a drink of water. If you don't have water, take a drink of beer. If you don't have beer, take a moment to re-evaluate your life choices",
@@ -279,19 +283,28 @@ var grammars = {
         originStart: [
             "Build a motif out of #notesNoSilence#.",
             "Play #notesNoSilence# (making a motif out of it).",
-            "Play the head to your favourite jazz standard. Then, play #notesOrSilence#.",
-            "Try playing the hardest scale you know. Then, build a motif out of #notesNoSilence#.",
-            "Fake out the audience, by pretending to play. Then, play #notesOrSilence#.",
-            "Play a motif (make sure to build on it as you improvise). Then, once you have played your motif, play #notesOrSilence#.",
-            "Play a fragment of your favourite jazz standard. Then, play #notesOrSilence#.",
-            "Play #notesNoSilence#.",
-            "Play #notesNoSilence#.",
-            "Play #notesNoSilence#.",
-            "Play #notesNoSilence#.",
-            "Play #notesOrSilence#.",
-            "Play #notesOrSilence#.",
-            "Play #notesOrSilence#.",
-            "Play the licc #liccModifier#."
+            "Play anything motivic (make sure to build on it as you improvise). Then, once you have played your motif, play #notesOrSilence#.",
+            "Listen to what other people are playing, and adopt a motive as your own. Make sure to play with them, not against them.",
+            "Wait for somebody else to play, and then mirror the motivic elements.",
+            "Wait for another person to play, and then try and play contrapuntally, building off what they play.",
+            "Play nothing. Wait your turn. Then, #originAfterStart#",
+            "Play nothing. Wait your turn. Then, when it is your turn, #originAfterStart#",
+            "Play #silence#. Then, #originAfterStart#",
+            "Play #silence#. Then, #originAfterStart#"
+        ],
+        originAfterStart: [
+            "play the head to your favourite jazz standard. Then, play #notesOrSilence#.",
+            "try playing the hardest scale you know. Then, build a motif out of #notesNoSilence#.",
+            "fake out the audience, by pretending to play. Then, play #notesOrSilence#.",
+            "play a fragment of your favourite jazz standard. Then, play #notesOrSilence#.",
+            "play #notesNoSilence#.",
+            "play #notesNoSilence#.",
+            "play #notesNoSilence#.",
+            "play #notesNoSilence#.",
+            "play #notesOrSilence#.",
+            "play #notesOrSilence#.",
+            "play #notesOrSilence#.",
+            "play the licc #liccModifier#."
         ],
         origin: [
             "Play Something is #pieceOrCode.a# #written# by Rhys Gray. It is a #simpleWebapp# that #makes# #instructions# for #originPeople# to improvise over. #playWhatItTellsYouToDo# #moveOn# #clickToContinue#."
@@ -301,7 +314,7 @@ var grammars = {
             "Do what it tells you.",
             "Do what the app says.",
             "Follow the instructions presented to you.",
-            "To your best ability, follow the directions."
+            "To the best of your abilities, follow the directions."
         ],
         moveOn: [
             "If it doesn't tell you when to move on, you are free to move on at any time.",
@@ -323,8 +336,8 @@ var grammars = {
             "simple webapp",
             "simple webapp",
             "simple webapp",
-            "simple webapp",
-            "simple webapp",
+            "webapp",
+            "webapp",
             "simple webapp",
             "simple webapp",
             "needlessly complex webapp",
@@ -339,7 +352,10 @@ var grammars = {
         ],
         pieceOrCode: [
             "piece",
+            "generative piece",
             "piece of code",
+            "piece of music",
+            "composition",
             "musical work",
             "abomination",
             "terrible piece of code"

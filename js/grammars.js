@@ -119,7 +119,7 @@ var grammars = {
                 "#note#",
                 "#collab#",
                 "#note##forHowLongChance#"
-        ]
+        ],
         collab: [
             "progressively quieter, letting someone else take over. Then, join back in with #note#",
             "nothing while you listen to what themes are developing around you. Once you've heard a motif, start to do call and response with the musician",

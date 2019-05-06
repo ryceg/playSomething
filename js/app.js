@@ -37,9 +37,9 @@ $(document).ready(function() {
             });
             window.readIntro = true
         } else {
-            var s = grammar.flatten("#afterOrigin.capitalize#");
+            s = grammar.flatten("#afterOrigin.capitalize#");
             console.log(s);
-            var div = $("<div/>", {
+            div = $("<div/>", {
                 class : "outputSample",
                 html : s
             });

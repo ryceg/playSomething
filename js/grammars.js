@@ -295,7 +295,11 @@ var grammars = {
             "Play Something is #pieceOrCode.a# #written# by Rhys Gray. It is a #simpleWebapp# that #makes# #instructions# for #originPeople# to improvise over. #playWhatItTellsYouToDo# #moveOn# #clickToContinue#."
         ],
         playWhatItTellsYouToDo: [
-            "Play what it tells you to do."
+            "Play what it tells you to do.",
+            "Do what it tells you.",
+            "Do what the app says.",
+            "Follow the instructions presented to you.",
+            "To your best ability, follow the directions."
         ],
         moveOn: [
             "If it doesn't tell you when to move on, you are free to move on at any time.",

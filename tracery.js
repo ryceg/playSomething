@@ -216,7 +216,7 @@ var tracery = {
     }
 
     /* Simple JavaScript Inheritance
-     * By John Resig http://ejohn.org/
+     * By John Resig https://ejohn.org/
      * MIT Licensed.
      */
 

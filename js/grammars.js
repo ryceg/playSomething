@@ -114,14 +114,19 @@ var grammars = {
         ],
         notesOrSilence: [
             "#note#",
-            "#collab#",
             "#note##forHowLongChance#",
-            "#silence#"
+            "#collab#",
+            "#silence#",
+            "#collabOrSilence"
         ],
         notesNoSilence: [
                 "#note#",
                 "#collab#",
                 "#note##forHowLongChance#"
+        ],
+        collabOrSilence: [
+            "#collab# #modifier#",
+            "#silence#"
         ],
         collab: [
             "progressively quieter, letting someone else take over. Then, join back in with #note#",
@@ -166,6 +171,7 @@ var grammars = {
             "nothing. Let someone else have a solo",
             "nothing. Let someone else have a solo",
             "nothing. Let someone else have a solo",
+            "a supporting role for someone else to have a solo",
             "a supporting role for someone else to have a solo",
             "nothing. Appreciate what the other musicians are playing",
             "only when it would enhance what other people are playing",

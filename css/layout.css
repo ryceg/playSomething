@@ -80,6 +80,13 @@
 	padding: 2ch;
 	/* background-color: rgb(230, 200, 255); */
 }
+#rhys {
+	margin: 5px;
+	size: 0.5em;
+	text-align: right;
+	padding: 2ch;
+	/* background-color: rgb(230, 200, 255); */
+}
 
 #grammar {
 	padding: 2ch;
